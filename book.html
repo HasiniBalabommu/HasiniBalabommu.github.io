@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Now - Travel Package</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .booking-container {
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #FFD700;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #FFD700;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    input:focus, select:focus {
+      outline: 2px solid #FFD700;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #FFD700;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e6c200;
+    }
+
+    .note {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="booking-container">
+    <h2>Book Your Travel Package</h2>
+    <form action="confirmation.html">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" required />
+
+      <label for="travel-date">Travel Date</label>
+      <input type="date" id="travel-date" required />
+
+      <label for="card">Card Number</label>
+      <input type="text" id="card" placeholder="XXXX-XXXX-XXXX-XXXX" required />
+
+      <label for="cvv">CVV</label>
+      <input type="password" id="cvv" placeholder="***" required />
+
+      <button type="submit" class="btn">Confirm & Pay</button>
+    </form>
+    <div class="note">Secure payment powered by TravelEase™</div>
+  </div>
+
+</body>
+</html>
+
