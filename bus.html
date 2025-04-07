@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bus Booking | TRAVEL Go</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(to right, black, #222);
+        color: #fff;
+        min-height: 100vh;
+        padding: 50px;
+    }
+
+    .booking {
+        background: #2c2c2c;
+        width: 900px;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+        transition: 0.3s;
+        margin-bottom: 40px;
+        position: relative;
+        top: 0px;  /* Moves the form slightly upward */
+        left: 20px;  /* Moves the form towards the left */
+    }
+
+    .booking:hover {
+        box-shadow: 0 12px 30px rgba(255, 204, 0, 0.9);
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);   /* Two-column layout */
+        gap: 20px;
+    }
+
+    .full-width {
+        grid-column: span 2;  /* Fields that span the full width for button */
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input, select, button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        background: #444;
+        color: #fff;
+    }
+
+    input:focus, select:focus {
+        outline: 2px solid #ffc107;
+    }
+
+    button {
+        background: #ffc107;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #e0a800;
+    }
+
+    /* Features Section */
+    .extra {
+        background: #1e1e1e;
+        width: 100%;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top:30px;
+    }
+
+    .features {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .feature-card {
+        background: #2c2c2c;
+        color: #fff;
+        width: calc(25% - 20px);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .feature-card img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .feature-card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+        form {
+            grid-template-columns: 1fr; /* Single column layout for smaller screens */
+        }
+        .extra, .booking {
+            width: 100%;
+        }
+        .features {
+            flex-direction: column;
+        }
+        .feature-card {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Flight Booking Section -->
+<div class="booking">
+    <h2> Book Your Bus</h2>
+    <form action="#" method="POST">
+        <div>
+            <label for="name">Passenger Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+        <div>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div>
+            <label for="date">Travel Date</label>
+            <input type="date" id="date" required>
+        </div>
+        <div>
+            <label for="from">From</label>
+            <input type="text" id="from" placeholder="Departure City" required>
+        </div>
+
+        <div>
+            <label for="to">To</label>
+            <input type="text" id="to" placeholder="Destination City" required>
+        </div>
+        <div>
+            <label for="passengers">Number of Passengers</label>
+            <input type="number" id="passengers" min="1" max="10" value="1" required>
+        </div>
+
+               <div class="full-width">
+            <button type="submit">Book Now</button>
+        </div>
+    </form>
+</div>
+
+<!-- Features Section -->
+<div class="extra">
+    <div class="features">
+
+        <div class="feature-card">
+            <img src="https://cdn4.iconfinder.com/data/icons/restuarant/512/Colored_restaurant-35-512.png" alt="Food Icon">
+            <h3>Pre-order Meals</h3>
+            <p>Enjoy delicious meals during your journey by pre-ordering them in advance.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="https://thumbs.dreamstime.com/b/transport-tracker-app-icon-bus-tracking-vector-mobile-city-rout-smartphone-application-determine-public-vehicle-placement-240239976.jpg" >
+            <h3>Track location</h3>
+            <p>No worry and hurry, track your location with us </p>
+        </div>
+
+        <div class="feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/256/6356/6356662.png" alt="Seat Icon">
+            <h3>Seat Selection</h3>
+            <p>Choose your preferred seat in advance for maximum comfort.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="https://static.vecteezy.com/system/resources/previews/016/695/830/non_2x/travel-insurance-icon-design-free-vector.jpg" alt="Insurance Icon">
+            <h3>Travel Insurance</h3>
+            <p>Get travel insurance to stay protected during your journey.</p>
+        </div>
+    </div>
+</div>
+<footer style="background-color:#000;text-align:center;padding:40px;">
+<p>© 2025 TRAVEL Go | All Rights Reserved</p>
+</footer>
+</body>
+</html>
