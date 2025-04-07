@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Navbar</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div class="intro">
+        <div class="left-section">
+            <a class="brand">TRAVEL Go</a>
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+        <div class="right-section">
+            <a href="file:///C:/Users/chscu/OneDrive/Desktop/Capstone/project.html">HOME</a>
+            <a href="file:///C:/Users/chscu/OneDrive/Desktop/Capstone/explore.html">EXPLORE</a>
+            <a href="file:///C:/Users/chscu/OneDrive/Desktop/Capstone/hotels3.html">HOTELS</a>
+            <a href="file:///C:/Users/chscu/OneDrive/Desktop/Capstone/travel.html#">TRANSPORT</a>
+            <a href="file:///C:/Users/chscu/OneDrive/Desktop/Capstone/contactus.html">CONTACT US</a>
+        </div>
+    </div>
+<div class ="middle">
+<div class ="text-section">
+<h1>TRAVEL</h1><br>
+<h1>ADVENTURE</h1><br>
+<h1>EXPLORE</h1><br>
+<button onclick ="location.href='file:///C:/Users/chscu/OneDrive/Desktop/Capstone/signup.html';"class ="btn">GET STARTED</button>
+</div>
+<div class="slider">
+<div class="slide-track">
+<img src="C:\Users\chscu\Downloads\IMG-20250309-WA0015.jpg">
+<img src="C:\Users\chscu\Downloads\IMG-20250309-WA0014.jpg">
+<img src="C:\Users\chscu\Downloads\IMG-20250309-WA0013.jpg">
+<img src="C:\Users\chscu\Downloads\IMG-20250309-WA0016.jpg">
+
+<img src="C:\Users\chscu\Downloads\IMG-20250309-WA0015.jpg">
+<img src="C:\Users\chscu\Downloads\IMG-20250309-WA0014.jpg">
+<img src="C:\Users\chscu\Downloads\IMG-20250309-WA0013.jpg">
+<img src="C:\Users\chscu\Downloads\IMG-20250309-WA0016.jpg">
+</div>
+</div>
+</div>
+<h1 style="text-align:center;color:white;margin-top:50px;">✈️ Your Ultimate Travel Companion Awaits!🌍</h1>
+<p style="text-align:center;color:white;">Discover, Stay, Travel & Connect – Seamless journeys, unbeatable deals, and stress-free adventures, all in one place</p>
+<div class="middle2">
+<div class="info">
+<img src="https://cdn-icons-png.flaticon.com/512/471/471094.png">
+<h2>EXPLORE</h2>
+<p>Explore our packages,comes with amazing discounts and deals only for you </p>
+</div>
+<div class="info">
+<img src="https://cdn-icons-png.flaticon.com/512/4269/4269103.png">
+<h2>HOTELS</h2>
+<p>Find the best stay for you, with the best prices</p>
+</div>
+<div class="info">
+<img src="https://cdn2.iconfinder.com/data/icons/logistics-color/64/transportation-airplane-truck-boat-transport-carry-logistics-1024.png">
+<h2>TRANSPORT</h2>
+<p>Find the best travel partner for you,acording to your convinience</p>
+</div>
+<div class="info">
+<img src="https://st2.depositphotos.com/1265075/7222/v/950/depositphotos_72226779-stock-illustration-contact-us-icons.jpg">
+<h2>CONTACT US </h2>
+<p>Reach out to us for further help,your suggestions are valued</p>
+</div>
+</div>
+<div class="last">
+<h2 style="padding:15px 30px;margin-bottom:0px;">About Us:</h2>
+<div class="text">
+<img src="C:\Users\chscu\OneDrive\Desktop\Capstone\loogo.png">
+<p style="margin-left:40px;margin-top:0px;padding:0px 5px;font-size:21px;">Welcome to Travel Go, your ultimate travel companion! 🌍✨
+
+We believe that planning a trip should be effortless and exciting. That’s why we’ve created a one-stop platform where you can find transport, book hotels, and explore the best travel packages—all in one place. Whether you're a solo traveler, a family on vacation, or an adventure seeker, we make sure your journey is smooth and stress-free.
+With a user-friendly interface and carefully curated options, we bring you the best travel deals, helping you save time and money while creating unforgettable experiences. So pack your bags, and let’s make every journey an adventure!
+
+🚀 Explore. Enjoy. Experience. 🚀
+</p>
+</div>
+</div>
+<div class="faqs">
+<h2>Currency Converter 💰</h2>
+<div class="currency">
+<label>Amount:</label>
+<input type="number" id="amount" value=".." min="0">
+<label>From:</label>
+<select id="fromCurrency">
+<option value="USD">USD</option>
+<option value="EUR">EUR</option>
+<option value="GBP">GBP</option>
+<option value="INR">INR</option>
+<option value="JPY">JPY</option>
+</select>
+<label>To:</label>
+<select id="toCurrency">
+<option value="USD">USD</option>
+<option value="EUR">EUR</option>
+<option value="GBP">GBP</option>
+<option value="INR">INR</option>
+<option value="JPY">JPY</option>
+</select>
+<button onclick="convertCurrency()">Convert</button>
+</div>
+<p id="result"></p>
+</div>
+<footer class="footer">
+<p> 2025 Travel Go. All Rights Reserved.</p>
+</footer>
+<script>
+function convertCurrency() {
+            let amount = document.getElementById("amount").value;
+            let fromCurrency = document.getElementById("fromCurrency").value;
+            let toCurrency = document.getElementById("toCurrency").value;
+
+            let exchangeRates = {
+                USD: 1,
+                EUR: 0.92,
+                GBP: 0.78,
+                INR: 83,
+                JPY: 150
+            };
+
+            if (exchangeRates[fromCurrency] && exchangeRates[toCurrency]) {
+                let convertedAmount = (amount / exchangeRates[fromCurrency]) * exchangeRates[toCurrency];
+                document.getElementById("result").innerHTML = 
+                    `Converted Amount: <strong>${convertedAmount.toFixed(2)} ${toCurrency}</strong>`;
+            } else {
+                document.getElementById("result").innerHTML = "Invalid Currency Selection!";
+            }
+        }
+    </script>
+</body>
+</html>
