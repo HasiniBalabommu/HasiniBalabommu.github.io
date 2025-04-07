@@ -1,0 +1,135 @@
+body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .intro {
+            height: 60px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+        }
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 47px;
+            flex: 1;
+        }
+        .brand {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        input {
+            border-radius: 10px;
+            width: 350px;
+            padding: 5px 5px;
+            height: 18px;
+        }
+        button {
+            background-color: orange;
+            color: black;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .right-section {
+            display: flex;
+            gap: 50px;
+            margin-right: 24px;
+        }
+        .right-section a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .container {
+            text-align: center;
+            padding: 10px 50px;
+           
+        }
+        .destination {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+        .destination img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .destination h3 {
+            margin: 10px 0;
+        }
+        .destination p {
+            font-size: 14px;
+        }
+        .btn{
+    background: #ffcc00;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+footer{
+text-align:center;
+padding:20px;
+background-color:#111;
+}
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .left-section, .right-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .destination {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .destination img {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+
