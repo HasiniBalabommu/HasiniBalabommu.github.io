@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Santorini Package</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Background Slideshow */
+    .slideshow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: slideShow 14s infinite;
+    }
+
+    .slideshow img:nth-child(1) { animation-delay: 0s; }
+    .slideshow img:nth-child(2) { animation-delay: 8s; }
+    .slideshow img:nth-child(3) { animation-delay: 16s; }
+
+    @keyframes slideShow {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      30% { opacity: 1; }
+      40% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    /* Content Box */
+    .container {
+      max-width: 700px;
+      margin: 120px 100px;
+      padding: 30px;
+      background: #add8e6;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+      color: white;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: black;
+      text-align: center;
+    }
+
+    .details {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color:black;
+      font-weight:300px;
+    }
+
+    .details ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .details ul li {
+      margin-bottom: 12px;
+      padding-left: 24px;
+      position: relative;
+     font-weight:300px;
+    }
+
+    .details ul li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+      color: black;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background-color: #72bcd4;
+      color: black;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ffc400;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 30px 20px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slideshow Background -->
+  <div class="slideshow">
+    <img src="https://wallpaperaccess.com/full/1113493.jpg" alt="Santorini 1" />
+    <img src="https://santorinibesttours.com/sites/default/files/kamari-black-sandy-beach_0.jpg" alt="Santorini 2" />
+    <img src="https://www.tripsavvy.com/thmb/1Ajx7R6KTGTyQ2yBWWlGqoOftLQ=/3845x2563/filters:fill(auto,1)/GettyImages-461358497-590d4e663df78c9283ec10ac.jpg" alt="Santorini 3" />
+  </div>
+
+  <!-- Package Details -->
+  <div class="container">
+    <h1>Santorini, Greece – Travel Package</h1>
+    
+    <div class="details">
+      <ul>
+        <li>5 Nights & 6 Days Stay at a Luxury Beach Resort</li>
+        <li>Daily Greek Breakfast Included</li>
+        <li>Private Sightseeing & Historical Tours</li>
+        <li>Sunset Catamaran Cruise Experience</li>
+        <li>Round-trip Flights from Major Cities</li>
+        <li>Local Greek Guide & Interpreter</li>
+        <li>All Transportation & Transfers Included</li>
+      </ul>
+    </div>
+
+    <div class="buttons">
+      <a href="explore.html" class="btn">← Back to Explore</a>
+      <a href="file:///C:/Users/chscu/OneDrive/Desktop/Capstone/book.html" class="btn">Book Now</a>
+    </div>
+  </div>
+</body>
+</html>
