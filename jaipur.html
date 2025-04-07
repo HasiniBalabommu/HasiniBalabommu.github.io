@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jaipur Travel Package</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.5);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+      color: white;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #FFB347;
+      text-align: center;
+    }
+
+    .details {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .details ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .details ul li {
+      margin-bottom: 12px;
+      padding-left: 24px;
+      position: relative;
+      color:black;
+      font-weight:bold;
+    }
+
+    .details ul li::before {
+      content: "🏰";
+      position: absolute;
+      left: 0;
+    }
+
+    .price {
+      font-size: 1.4rem;
+      color: #FFD700;
+      text-align: center;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background-color: #FFD700;
+      color: black;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e0b700;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 30px 20px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop class="video-background">
+    <source src="C:\Users\chscu\Downloads\13041678_1920_1080_50fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Package Details -->
+  <div class="container">
+    <h1>Jaipur Royal Heritage Tour</h1>
+
+    <div class="details">
+      <ul>
+        <li>3 Nights Stay in a Traditional Haveli</li>
+        <li>Amber Fort Elephant Ride</li>
+        <li>Explore City Palace, Jantar Mantar & Hawa Mahal</li>
+        <li>Evening Light & Sound Show at Amber Fort</li>
+        <li>Rajasthani Folk Dance & Dinner at Chokhi Dhani</li>
+        <li>Private AC Transport and Local Guide</li>
+      </ul>
+    </div>
+
+    <div class="price">🌟 Starting from ₹18,999 per person 🌟</div>
+
+    <div class="buttons">
+      <a href="explore.html" class="btn">← Back to Explore</a>
+      <a href="file:///C:/Users/chscu/OneDrive/Desktop/Capstone/book.html" class="btn">Book Now</a>
+    </div>
+  </div>
+
+</body>
+</html>
